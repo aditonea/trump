@@ -78,6 +78,7 @@ p {
 .social-media {
   display: flex;
   gap: 16px;
+  margin-top: 24px;
 }
 
 a {
@@ -94,7 +95,6 @@ a {
   cursor: pointer;
   font-family: "Billy";
   font-size: 24px;
-  margin-top: 50px;
 }
 
 .social:hover {
@@ -103,17 +103,15 @@ a {
 
 /* Mobile devices (portrait and landscape) */
 @media only screen and (min-width: 0px) and (max-width: 767px) {
-  body {
-    height: 100dvh;
-  }
-
   .cover {
-    width: 80%;
+    width: 90%;
   }
 
   .container {
     width: 80%;
     justify-content: space-between;
+    border: 12px solid white;
+    box-shadow: 0 0 0 16px #b31942, 0 0 0 4px white;
   }
 
   .profile {
@@ -128,9 +126,18 @@ a {
     font-size: 20px;
   }
 
+  .title {
+    font-size: 32px;
+  }
+
   .text {
     font-size: 24px;
     width: 90%;
+  }
+
+  .social-media {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
