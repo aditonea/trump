@@ -1,0 +1,171 @@
+@font-face {
+  font-family: "Billy";
+  src: url("/Billy_2.0.woff") format("woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("/images/background.gif");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  margin: 50px 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #0a3161;
+  width: 60%;
+  border-radius: 24px;
+  padding: 50px 0;
+  border: 16px solid white;
+  box-shadow: 0 0 0 20px #b31942, 0 0 0 4px white;
+}
+
+.cover {
+  width: 50%;
+  animation: wiggle 0.5s ease-in-out infinite;
+}
+
+.profile {
+  margin-top: 50px;
+  width: 320px;
+  aspect-ratio: 1;
+  border-radius: 20%;
+}
+
+.buy {
+  background-color: #f9a826;
+  color: #fff;
+  padding: 24px 36px;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-family: "Billy";
+  font-size: 36px;
+  margin-top: 50px;
+}
+
+.buy:hover {
+  scale: 2;
+}
+
+p {
+  color: #fff;
+  text-align: center;
+  font-family: "Billy";
+}
+
+.title {
+  font-size: 40px;
+  margin-top: 50px;
+}
+
+.text {
+  font-size: 32px;
+  margin-top: 20px;
+  width: 60%;
+  line-height: 1.5;
+}
+
+.social-media {
+  display: flex;
+  gap: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.social {
+  background-color: #f9a826;
+  color: #fff;
+  padding: 16px 36px;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-family: "Billy";
+  font-size: 24px;
+  margin-top: 50px;
+}
+
+.social:hover {
+  scale: 1.1;
+}
+
+/* Mobile devices (portrait and landscape) */
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  body {
+    height: 100dvh;
+  }
+
+  .cover {
+    width: 80%;
+  }
+
+  .container {
+    width: 80%;
+    justify-content: space-between;
+  }
+
+  .profile {
+    width: 240px;
+  }
+
+  .buy {
+    font-size: 24px;
+  }
+
+  .social {
+    font-size: 20px;
+  }
+
+  .text {
+    font-size: 24px;
+    width: 90%;
+  }
+}
+
+/* Tablet devices (portrait and landscape) */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .images {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .social-media {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cover {
+    width: 80%;
+  }
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+  75% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
